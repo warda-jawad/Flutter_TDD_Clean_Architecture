@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:first_tdd_app/core/error/exeptions.dart';
 import 'package:first_tdd_app/core/error/failuries.dart';
-import 'package:first_tdd_app/core/platform/network_info.dart';
+import 'package:first_tdd_app/core/network/network_info.dart';
 import 'package:first_tdd_app/featues/number-trivia/data/datasoureces/number_trivia_local_data_source.dart';
 import 'package:first_tdd_app/featues/number-trivia/data/datasoureces/number_trivia_remote_data_source.dart';
 import 'package:first_tdd_app/featues/number-trivia/data/models/number_trivia_model.dart';
@@ -59,7 +59,7 @@ void main() {
     // We'll use these three variables throughout all the tests
     final tNumber = 1;
     final tNumberTriviaModel = NumberTriviaModel(
-      text: 'test trivia',
+      text: "test",
       number: tNumber,
     );
     final NumberTrivia tNumberTrivia = tNumberTriviaModel;
@@ -166,8 +166,7 @@ void main() {
   });
 
   group('getRandomNumberTrivia', () {
-    final tNumberTriviaModel =
-        NumberTriviaModel(number: 123, text: 'test trivia');
+    final tNumberTriviaModel = NumberTriviaModel(number: 123, text: "test");
     final NumberTrivia tNumberTrivia = tNumberTriviaModel;
 
     test('should check if the device is online', () async {
